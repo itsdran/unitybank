@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="templates\css\style.css">
     <title>UnityBank (Baby M)</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
         <div class="login">
             <center>
                 <a href="index.php">
-                    <?php include("logo.php");?>
+                    <?php include("templates\logo.php");?>
                 </a>                <br><br><br>
                 <form >
                     <input type="text" name="userID" placeholder="User ID"/>
@@ -24,7 +24,7 @@
                 </form>
                 <a href="#">Forgot my user ID or Password</a> | <a href="#">Unblock my Profile</a><br><br>
                     OR<br>
-                    <button id="signup"><a href="signup.php">SIGN UP NOW</a></button>
+                    <button id="signup"><a href="signup.php">SIGN UP</a></button>
                 <p class="terms"><b>This site works best on the latest Google Chrome browser.</b></p>
                     <p class="terms">
                         Union Bank of the Philippines is regulated by the Bangko Sentral ng Pilipinas. For inquiries and comments, please contact our.  24-hour Customer Servic
