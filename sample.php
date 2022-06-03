@@ -9,7 +9,7 @@
 <body>
     <?php include ("templates/navbarfixed.php");?>
     <div class="body">
-        <!--Start here!-->huiii babym,
+        <!--Start here!-->huiii babym, magnanakaw
     </div>
 </div>
 </body>
