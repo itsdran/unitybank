@@ -294,3 +294,115 @@ div.p {
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
 }
 
+
+/*Settings css start -Pineda*/
+.setting-container{
+    width: 1050px;
+    height: 580px;
+    background-color: #ffffff;
+    padding: auto;
+    font-family: 'Oswald',sans-serif;
+    margin-left: 7%;
+    font-size: 16px;
+}
+
+.setting-content{
+  width: 1000px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.setting-content strong{
+    position: absolute;
+    margin-left: -380px;
+    padding-top: 3px;
+
+}
+
+.setting-content h4{
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+.setting-content p{
+    padding-top: -5px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.setting-content input.smoller {
+        transform: scale(.5);
+        margin: 0px;
+        margin-left: -390px;
+}
+
+
+/*Settings css end*/
+
+
+/*about css start -Pineda*/
+
+.about-container{
+    width: 1000px;
+    height: 650px;
+    border: 1px black;
+    background-color: white;
+    padding: auto;
+    float: center;
+    margin-left: 10%;
+    font-family: 'Oswald',sans-serif;
+}
+
+.about{
+    float: center;
+    height: 80px;
+    width: 400px;
+    background-color: #a0d979;
+    border-radius: 20px;
+    font-family: 'Oswald',sans-serif;
+    margin-left: 50px;
+}
+
+.about h2{
+    padding-top: 20px;
+}
+
+.about p{
+    margin-left: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.leftfloat{
+    float: left;
+    width: 50%;
+}
+
+.rightfloat{
+    float: right;
+    width: 50%;
+}
+
+.contact{
+    width: 450px;
+    height: 350px;
+    background-color: lightgray;
+    font-family: 'Oswald',sans-serif;
+    margin-left: 20px;
+}
+
+.contact2{
+    width: 400px;
+    height: 100px;
+    background-color: #ffffff;
+    font-family: 'Oswald',sans-serif;
+    margin: 0 auto;
+}
+
+.contact3{
+    width: 400px;
+    height: 120px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+/*about css end*/
