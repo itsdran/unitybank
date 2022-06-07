@@ -1,0 +1,70 @@
+.dashboard-body {
+    display: flex;
+    width: 100%;
+    padding: 60px 50px;
+    gap: 40px;
+    box-sizing: border-box;
+}
+
+.dashboard-left,
+.dashboard-right {
+    width: 50%;
+}
+
+.dashboard-right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.dashboard-section h5 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.dashboard-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-section-content {
+    height: 150px;
+    width: 100%;
+    background-color: lightgreen;
+    border-radius: 15px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+
+.pay-bills-body {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 50px;
+    gap: 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.pay-bills-body h5 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.pay-bills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pay-bills-option {
+    background-color: lightgreen;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+} img.account {
+    height: 50px;
+    width: 160px;
+    margin: 20px;
+}

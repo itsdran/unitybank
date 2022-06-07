@@ -3,37 +3,26 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="templates\css\style.css">
+    <link rel="stylesheet" href="templates/css/index_style.css">
     <title>UnityBank (Baby M)</title>
 </head>
 <body>
-    <div class="body">
-        <div class="banner"><img src="https://rampages.us/izdivine/wp-content/uploads/sites/8175/2015/10/8.jpg" width="100%" height="100%"/></div>
-        <div class="login">
-            <center>
-                <a href="index.php">
-                    <?php include("templates\logo.php");?>
-                </a><br><br><br>
-                <form method="POST" action="sample.php">
-                    <input type="text" name="atmNumber" placeholder="ATM Number"/>
-                    <input type="password" name="password" placeholder="Password"/><br/>
-                    
-                    <div class="notRobot">
-                        <input type="checkbox" name="notRobot" id="checkbox"> I am not a robot</input><br>
-                    </div>
-                    <input type="submit" name="login" value="LOG IN" id="login"/><br/>
+        <?php include("templates/php/logo.php");?>
+        <div id="login">
+                <br><br><br>
+                <form method="POST" action="dashboard.php" class="login">
+                    <font size="24">Log In</font><br><br><br><br>
+                    <label for="atmNumber">ATM Number</label><br/>
+                    <input type="text" name="atmNumber" id="atmNumber"/><br/><br/><br/><br/>
+                    <label for="atmNumber">Password</label><br/>
+                    <input type="password" name="password"/><br/>
+                    <a href="#" id="forgot">Forgot Password?</a><br/><br/><br/>
+                    <center>
+                        <button type="submit" name="login" id="login">LOG IN</button><br/><br/><br/>
+                        <div id="signup">Don't have an account? <a href="signup.php">Sign Up!</a></div>
+                    </center>
                 </form>
-                <a href="#">Forgot my user ID or Password</a> | <a href="#">Unblock my Profile</a><br><br>
-                    OR<br>
-                    <button id="signup"><a href="accounts\signup.php">SIGN UP</a></button>
-                <p class="terms"><b>This site works best on the latest Google Chrome browser.</b></p>
-                    <p class="terms">
-                        Union Bank of the Philippines is regulated by the Bangko Sentral ng Pilipinas. For inquiries and comments, please contact our.  24-hour Customer Servic
-                        A proud member of BancNet and PDIC.
-                    </p>
-                    <p class="terms">Deposits are insured by PDIC up to PHP 111B per depositor.</p>
-            </center>
+                <img src="paypal.png" style="float:right; width: 45%;">
         </div>
-    </div>
 </body>
 </html>
