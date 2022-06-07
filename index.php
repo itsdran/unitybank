@@ -10,12 +10,12 @@
         <?php include("templates/php/logo.php");?>
         <div id="login">
                 <br><br><br>
-                <form method="POST" action="dashboard.php" class="login">
+                <form method="POST" action="#" class="login">
                     <font size="24">Log In</font><br><br><br><br>
                     <label for="atmNumber">ATM Number</label><br/>
-                    <input type="text" name="atmNumber" id="atmNumber"/><br/><br/><br/><br/>
+                    <input type="text" name="atmNumber" id="atmNumber" required/><br/><br/><br/><br/>
                     <label for="atmNumber">Password</label><br/>
-                    <input type="password" name="password"/><br/>
+                    <input type="password" name="password" required/><br/>
                     <a href="#" id="forgot">Forgot Password?</a><br/><br/><br/>
                     <center>
                         <button type="submit" name="login" id="login">LOG IN</button><br/><br/><br/>

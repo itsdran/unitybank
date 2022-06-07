@@ -12,12 +12,12 @@
                 <br><br><br>
                 <form method="POST" action="#" class="signup">
                     <font size="24">Sign Up</font><br><br>
-                    <input type="text" name="fName" placeholder="First Name"/>
-                    <input type="text" name="lName" placeholder="Last Name"/>
-                    <input type="text" name="address" placeholder="Address"/>
-                    <input type="text" name="email" placeholder="E-mail"/>
-                    <input type="password" name="password" placeholder="Password"/>
-                    <input type="text" name="atmNumber" placeholder="ATM Number"/><br><br>
+                    <input type="text" name="fName" placeholder="First Name" required/>
+                    <input type="text" name="lName" placeholder="Last Name" required/>
+                    <input type="text" name="address" placeholder="Address" required/>
+                    <input type="text" name="email" placeholder="E-mail" required/>
+                    <input type="password" name="password" placeholder="Password" required/>
+                    <input type="text" name="atmNumber" placeholder="ATM Number" required/><br><br>
                     <center>
                         <input type="checkbox" name="notRobot" id="checkbox">&nbsp;I agree to the Terms of Agreement</input>
                         <br><br>

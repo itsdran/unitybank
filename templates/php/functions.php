@@ -14,7 +14,7 @@
                                         ('$f_name', '$l_name', '$add', '$mail', '$pass', '$atm');";
         mysqli_query($db, $query);
     }
-    if(isset($_POST['login'])){
+    /*if(isset($_POST['login'])){
         $atm = $_POST['atmNumber'];  
         $pass = $_POST['password'];  
         
@@ -36,6 +36,13 @@
         else{  
             echo '<script>alert("Login failed.")</script>';  
         }
-    }
-
+    }*/
+    ob_start();
+    session_start();
+    if(!isset($_SESSION['atmNumber'])) {
+        $alt = 'Please enter your ATM Number';
+    $link = ('<a href="dashboard.php"');
+        echo $link;
+    }else{
+        $alt = 'Vote';}
 ?>
