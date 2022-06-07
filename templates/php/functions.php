@@ -31,6 +31,7 @@
 
         if($count == 1){  
             echo '<script>alert("Login success.")</script>';
+            
         }  
         else{  
             echo '<script>alert("Login failed.")</script>';  

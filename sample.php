@@ -7,7 +7,7 @@
     <title>Navbar sample</title>
 </head>
 <body>
-    <?php include ("templates/navbarfixed.php");?>
+    <?php include ("templates/php/navbarfixed.php");?>
     <div class="body">
         <!--Start here!-->huiii babym
     </div>
