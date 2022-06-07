@@ -4,7 +4,7 @@ body {
 } div.body {
     margin: 0px;
     display: grid;
-    grid-template-columns: 70% 30%;
+    /* grid-template-columns: 70% 30%; */
 } #logo {
     width: 175px;
     height: 75px;
@@ -129,7 +129,12 @@ body {
 
 
 
-/* <--- DASHBOARD.PHP ---> */
+
+
+
+
+
+/* <--- SAMPLE.PHP ---> */
 
 .dashboard-body {
   display: flex;
