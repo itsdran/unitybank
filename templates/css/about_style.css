@@ -1,0 +1,42 @@
+div#columns {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    padding: 20px;
+    margin: 35px 75px;
+    background-color: #fff;
+} div.col1 {
+    display: block;
+} div.col2 {
+    display: block;
+} div.section {
+    border-radius: 25px;
+    padding: 20px 100px;
+    width: 50%;
+    margin: 30px 35px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #b4d997;
+    color: black;
+    box-shadow: 5px 10px #4d9650;
+    font-weight: bold;
+} .contactInfo p {
+    margin: 25px 5px;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 19px;
+} .contact{
+    width: auto;
+    background-color: #e6e7e9;
+    font-family: 'Oswald',sans-serif;
+    padding: 10px;
+    margin: 0px 20px;
+} .contactInfo{
+    background-color: #fff;
+    margin: 30px 20px;
+} p {
+    margin: 25px 55px;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 19px;
+}

@@ -1,0 +1,20 @@
+div.row {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    column-gap: 5px;
+    row-gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    margin: 35px 75px;
+    box-shadow: 5px 10px #888888;
+} div.column {
+    width: 100%;
+} div.column p {
+    background-color: #25995b;
+    color: #fff;
+    padding: 20px ;
+    margin: 10px 30px;
+} img.about {
+    padding: 20 30px;
+    margin: 20px 30px;
+}

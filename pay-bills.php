@@ -18,7 +18,7 @@
             <h5>MANAGE</h5>
             <p class="pay-bills-option">Recent Payments</p>
             <p class="pay-bills-option">Manage Billers</p>
-            <p class="pay-bills-option">FAQs</p>
+            <p class="pay-bills-option">FAQs</p><br><br><br><br><br><br><br>
           </div>
         </div>               
       </div>
