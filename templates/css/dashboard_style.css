@@ -1,70 +1,39 @@
-.dashboard-body {
-    display: flex;
-    width: 100%;
-    padding: 60px 50px;
-    gap: 40px;
-    box-sizing: border-box;
-}
-
-.dashboard-left,
-.dashboard-right {
-    width: 50%;
-}
-
-.dashboard-right {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.dashboard-section h5 {
+h1, h4 {
+    margin: 0px 7.5%;
+    margin-top: 30px;
+} h4.title {
+    margin: 15px 0;
+}h5 {
     margin: 0;
-    margin-bottom: 5px;
-}
-
-.dashboard-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.dashboard-section-content {
-    height: 150px;
-    width: 100%;
-    background-color: lightgreen;
-    border-radius: 15px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
-}
-
-
-.pay-bills-body {
-    display: flex;
-    flex-direction: column;
-    padding: 60px 50px;
-    gap: 40px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.pay-bills-body h5 {
-    margin: 0;
-    margin-bottom: 5px;
-}
-
-.pay-bills-section {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.pay-bills-option {
-    background-color: lightgreen;
-    padding: 15px 20px;
+    font-size: 22px;
+} div.section {
+    border-radius: 25px;
+    padding: 20px 30px;
+    width: 82.5%;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #b4d997;
+    color: black;
+    box-shadow: 5px 10px #4d9650;
+    font-weight: bold;
+} div.info {
+    text-align: left;
+} div.balance {
+    text-align: right;
+} div.column {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 85%;
+    margin: 25px auto;
+    column-gap: 20px;
+} div.one, div.two {
+    background-color: white;
+    padding: 10px;
     border-radius: 10px;
-    margin: 0;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
-} img.account {
-    height: 50px;
-    width: 160px;
-    margin: 20px;
+    box-shadow: 5px 10px #888888;
+} a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }

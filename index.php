@@ -8,21 +8,22 @@
 </head>
 <body>
         <?php include("templates/php/logo.php");?>
+        <img src="https://media.discordapp.net/attachments/982592711322386462/984790045443637309/bg.png" style="float:right; width: 45%;">
         <div id="login">
-                <br><br><br>
-                <form method="POST" action="#" class="login">
-                    <font size="24">Log In</font><br><br><br><br>
-                    <label for="atmNumber">ATM Number</label><br/>
-                    <input type="text" name="atmNumber" id="atmNumber" required/><br/><br/><br/><br/>
-                    <label for="atmNumber">Password</label><br/>
-                    <input type="password" name="password" required/><br/>
-                    <a href="#" id="forgot">Forgot Password?</a><br/><br/><br/>
-                    <center>
-                        <button type="submit" name="login" id="login">LOG IN</button><br/><br/><br/>
-                        <div id="signup">Don't have an account? <a href="signup.php">Sign Up!</a></div>
-                    </center>
-                </form>
-                <img src="paypal.png" style="float:right; width: 45%;">
+            <br><br><br>
+            <form method="POST" action="templates/php/functions.php" class="login">
+                <font size="24">Log In</font><br><br><br><br>
+                <label for="atmNumber">ATM Number</label><br/>
+                <input type="text" name="atmNumber" id="atmNumber" required/><br/><br/><br/><br/>
+                <label for="atmNumber">Password</label><br/>
+                <input type="password" name="password" required/>
+                <a href="forgotPassword.php" id="forgot">Forgot Password?</a><br/><br/><br/>
+                <center>
+                    <button type="submit" name="login" id="login">LOG IN</button><br/><br/><br/>
+                    <div id="signup">Don't have an account? <a href="signup.php">Sign Up!</a></div>
+                    <br><br><br>
+                </center>
+            </form>
         </div>
 </body>
 </html>

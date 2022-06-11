@@ -12,6 +12,7 @@
     /*height: 50px;*/
     margin: 0 auto;
     padding: 10px;
+    padding-bottom: 30px;
     background-color: #ffffff;
 } .setting-content strong{
     position: absolute;
@@ -35,5 +36,11 @@
     margin-left: 10px;
     font-size: 18px;
     padding-top: 6px;
-}
-/*Settings css end*/
+} a.deleteAccount {
+    padding: 10px 20px;
+    background-color:#D0342C;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+} 

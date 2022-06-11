@@ -1,11 +1,23 @@
+<?php
+    session_start();
+    include ("templates/php/functions.php");
+
+    if (!isset ($_SESSION ['atmNumber'])) {
+        $_SESSION['atmNumber'] = $_POST['atmNumber'];
+        echo "<script>alert('You must log in first.');</script>";
+        //echo "<script>location.href='index.php';</script>";
+    } else {
+        $atmNumber = $_SESSION['atmNumber'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
+    <?php include ("templates/php/functions.php");?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="templates/css/navbarfixed_style.css">
     <link rel="stylesheet" href="templates/css/donate_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Navbar sample</title>
+    <title>Donate now!</title>
 </head>
 <body>
     <?php include ("templates/php/navbarfixed.php");?>
@@ -29,23 +41,64 @@
                     <button type="submit" value="1000" class="donateMonthly">₱1000/mo</button>
                 </p>
             </div>
+
+            <!--<div class="column">
+                <p class="header">JOIN US AS A MEMBER</p>
+                <br>
+                <center>
+                    <img src="https://www.cscbroward.org/sites/default/files/styles/blog_/public/2019-08/All%20Children%20Develop%20at%20their%20Own%20Pace.JPG?h=33334fe2&itok=adHi3i7m"
+                    style="width:85%; height:70%;">
+                </center>
+                <p> Become a monthly contributor and recieve a token at appreciation sent straight from our HQ! <br>
+                    <br>
+                    <button type="submit" value="400" class="donateMonthly">₱400/mo</button>
+                    <button type="submit" value="600" class="donateMonthly">₱600/mo</button>
+                    <button type="submit" value="800" class="donateMonthly">₱800/mo</button>
+                    <button type="submit" value="1000" class="donateMonthly">₱1000/mo</button>
+                </p>
+            </div>-->
+
             <div class="column">
+                <center>
                 <p class="header">MAKE A ONE-TIME GIFT</p>
                 <form><br><br>
-                    <div id="choices">
-                        <div class="column"><button type="submit" value="500" class="donate-once">₱500</button></div>
-                        <div class="column"><button type="submit" value="1000" class="donate-once">₱1000</button></div>
-                        <div class="column"><button type="submit" value="1500" class="donate-once">₱1500</button></div>
-                        <div class="column"><button type="submit" value="2000" class="donate-once">₱2000</button></div>
-                        <div class="column"><button type="submit" value="2500" class="donate-once">₱2500</button></div>
-                        <div class="column"><button type="submit" value="3000" class="donate-once">₱3000</button></div>
+                    <div id="choices" name="amount">
+                        <div class="column"><button type="checkbox" value="500" class="donate-once">₱500</button></div>
+                        <div class="column"><button type="checkbox" value="1000" class="donate-once">₱1000</button></div>
+                        <div class="column"><button type="checkbox" value="1500" class="donate-once">₱1500</button></div>
+                        <div class="column"><button type="checkbox" value="2000" class="donate-once">₱2000</button></div>
+                        <div class="column"><button type="checkbox" value="2500" class="donate-once">₱2500</button></div>
+                        <div class="column"><button type="checkbox" value="3000" class="donate-once">₱3000</button></div>
                     </div><br><br>
-                    <input type="email" placeholder="Enter your email"/><br><br>
-                    <div class="total-donated">Total Donated: -203B(BM)</div><br><br>
-                    <button type="submit" class="donate-btn">DONATE</button>
-                </form
+                    <input type="text" value="Donation" hidden readonly/>
+                    <?php
+                        $query = "SELECT balance FROM users WHERE atmNumber = '$atmNumber'";
+                        $result = mysqli_query($db, $query);
+                        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+                        $number = $row['balance'];
+
+                        if ($number < 1000000) {
+                            // Anything less than a million
+                            $format = number_format($number);
+                        } else if ($number < 1000000000) {
+                            // Anything less than a billion
+                            $format = number_format($number / 1000000, 2) . 'M';
+                        } else {
+                            // At least a billion
+                            $format = number_format($number / 1000000000, 0) . 'B';
+                        }
+                    ?>
+
+                    <input type="email" placeholder="Enter your email" required/><br><br>
+                    <div class="total-donated">Total Donated: -<?php echo $format;?></div><br><br>
+                    <input type="submit" class="donate-btn" name="donate" value="Donate now!">
+                </form>
+                </center>
             </div>
+
         </div>
     </div>
 </body>
 </html>
+<?php } ?>

@@ -1,3 +1,16 @@
+<?php
+  session_start();
+  include ("templates/php/functions.php");
+
+  if (!isset ($_SESSION ['atmNumber'])) {
+    $_SESSION['atmNumber'] = $_POST['atmNumber'];
+    echo "<script>alert('You must log in first.');</script>";
+    //echo "<script>location.href='index.php';</script>";
+  } else {
+    $atmNumber = $_SESSION['atmNumber'];
+    //$id = $_SESSION ['userID'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,59 +22,60 @@
 </head>
 <body>
 <?php include ("templates/php/navbarfixed.php");?>
-    <div class="body">
-        <div class="dashboard-body">
-          <div class="dashboard-left">
-            <div class="dashboard-section">
-              <h5>ACCOUNTS</h5>
-              <div class="dashboard-section-content">
-                <div id="image">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Logo" class="account">
-    </div>
 
-    <div class="input">
-          <input type="number" name="account1" placeholder="Account1" readonly/>
-    </div>
-    </div>
-    <div class="dashboard-section-content">
-      <div id="image">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1920px-PayPal.svg.png" alt="Logo" class="account">
-      </div>
+  <?php
+    $query = "SELECT balance FROM users WHERE atmNumber = '$atmNumber'";
+    $result = mysqli_query($db, $query);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-      <div class="input">
-        <input type="number" name="account2" placeholder="Account2" readonly/>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="dashboard-right">
-        <div class="dashboard-section">
-          <h5>GOALS</h5>
-          <div class="dashboard-section-content">
-            <!-- Content ng GOALS ditu -->
-            <p>
+    $number = $row['balance'];
 
-            </p>
+    if ($number < 1000000) {
+        // Anything less than a million
+        $format = number_format($number);
+    } else if ($number < 1000000000) {
+        // Anything less than a billion
+        $format = number_format($number / 1000000, 2) . 'M';
+    } else {
+        // At least a billion
+        $format = number_format($number / 1000000000, 0) . 'B';
+    }
+  ?>
+
+  <div class="body">
+    <h1>Dashboard</h1>
+    <h4>Accounts</h4><br>
+    <div class="section">
+      <div class="info">
+        <?php
+          $query = "SELECT balance, fName, lName FROM users WHERE atmNumber = '$atmNumber'";
+            $result = mysqli_query($db, $query);
+            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        ?>
+            <b><?php echo $row['fName'] . ' ' . $row['lName'];?></b><br>
+            Check Savings ePayment<br>
           </div>
-        </div>
 
-      <div class="dashboard-section">
-        <h5>BRANCH VISIT</h5>
-        <div class="dashboard-section-content">
-            <!-- Content ng BRANCH VISIT ditu -->
-
-        </div>
+          <div class="balance">
+            <h5>Available Balance</h5>
+            <b>PHP <?php echo $format;?></b><br>
+          </div>
       </div>
-
-      <div class="dashboard-section">
-        <h5>OTHER OPTIONS</h5>
-        <div class="dashboard-section-content">
-          <!-- Content ng other options ditu -->
-
+      <div class="column">
+        <h4 class="title">Goals</h4>
+        <h4 class="title">Insurance Marketplace</h4>
+        <div class="one">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          <br><br><a href="#">LEARN MORE</a>
         </div>
-      </div>
-        </div>               
-      </div>
+        <div class="two">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <br><br><a href="#">LEARN MORE</a>
+        </div>
+    </div>
     </div>
 </body>
 </html>
+
+<?php
+}?>
