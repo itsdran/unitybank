@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    include ("templates/php/functions.php");
+
+    if (!isset ($_SESSION ['atmNumber'])) {
+    $_SESSION['atmNumber'] = $_POST['atmNumber'];
+    echo "<script>alert('You must log in first.');</script>";
+    //echo "<script>location.href='index.php';</script>";
+    } else {
+    $atmNumber = $_SESSION['atmNumber'];
+    //$id = $_SESSION ['userID'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,6 +66,16 @@
                 <input type="checkbox" class="smoller" checked="">
                 <strong>&nbsp;General Notification</strong><br>
                 <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+                <hr>
+                <h2>Account</h2>
+                <strong>&nbsp;See Profile</strong><br>
+                <p>Edit your profile, make changes to your information.</p>
+                <hr>
+                <strong>&nbsp;Delete Account</strong><br>
+                <p>Once deleted, you will never be able to recover your account.</p><br>
+                <a href="deleteaccount.php" class="deleteAccount">Delete</a>
+                <!--<a href="deleteAccount.php">
+                    <input type="submit" class="deleteAccount" name="delete-btn">DELETE BUTTON</button></a>-->
             </div>           
             <br>     
         <!--</div>
@@ -61,3 +83,4 @@
     </div>
 </body>
 </html>
+<?php } ?>
