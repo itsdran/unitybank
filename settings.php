@@ -25,61 +25,56 @@
     <?php include ("templates/php/navbarfixed.php");?>
     <div class="body">
         <br>
-        <!--<div class="setting-container">--> 
-            <div class="setting-content">
-                <h2>Notifications Settings</h2>
-                <p>Select notification you want to receive</p>
-                <hr>
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;Security</strong><br>
-                <p>Control security alert you will be notified.</p>
-                <hr>
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;Unusual activity notifications</strong><br>
-                <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
-                <hr>
+        <div class="setting-content">
+            <h2>Notifications Settings</h2>
+            <p>Select notification you want to receive</p>
+            <hr>
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;Security</strong><br>
+            <p>Control security alert you will be notified.</p>
+            <hr>
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;Unusual activity notifications</strong><br>
+            <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+            <hr>
 
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;Unauthorized financial activity</strong><br>
-                <p>Fusce lacinia elementum eros, sed vulputate urna eleifend nec.</p>
-                    
-                <hr>
-                <h2>System</h2>
-                <p>Please enable system alert you will get.</p>
-                <hr>
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;Unauthorized financial activity</strong><br>
+            <p>Fusce lacinia elementum eros, sed vulputate urna eleifend nec.</p>
+                
+            <hr>
+            <h2>System</h2>
+            <p>Please enable system alert you will get.</p>
+            <hr>
 
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;Notify me about new features and updates</strong><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <hr>
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;Notify me about new features and updates</strong><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <hr>
 
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;Notify me by email for latest news</strong><br>
-                <p>Nulla et tincidunt sapien. Sed eleifend volutpat elementum.</p>
-                <hr>
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;Notify me by email for latest news</strong><br>
+            <p>Nulla et tincidunt sapien. Sed eleifend volutpat elementum.</p>
+            <hr>
 
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;Notify me about tips on using account</strong><br>
-                <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
-                <hr>
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;Notify me about tips on using account</strong><br>
+            <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+            <hr>
 
-                <input type="checkbox" class="smoller" checked="">
-                <strong>&nbsp;General Notification</strong><br>
-                <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
-                <hr>
-                <h2>Account</h2>
-                <strong>&nbsp;See Profile</strong><br>
-                <p>Edit your profile, make changes to your information.</p>
-                <hr>
-                <strong>&nbsp;Delete Account</strong><br>
-                <p>Once deleted, you will never be able to recover your account.</p><br>
-                <a href="deleteaccount.php" class="deleteAccount">Delete</a>
-                <!--<a href="deleteAccount.php">
-                    <input type="submit" class="deleteAccount" name="delete-btn">DELETE BUTTON</button></a>-->
-            </div>           
-            <br>     
-        <!--</div>
-    </div>-->
+            <input type="checkbox" class="smoller" checked="">
+            <strong>&nbsp;General Notification</strong><br>
+            <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
+            <hr>
+            <h2>Account</h2>
+            <strong>&nbsp;See Profile</strong><br>
+            <p>Edit your profile, make changes to your information.</p>
+            <hr>
+            <strong>&nbsp;Delete Account</strong><br>
+            <p>Once deleted, you will never be able to recover your account.</p><br>
+            <a href="deleteAccount.php" class="deleteAccount" onclick="return confirm('Are you sure you want to delete this account?');">Delete Account</a>
+        </div>           
+        <br>     
     </div>
 </body>
 </html>
