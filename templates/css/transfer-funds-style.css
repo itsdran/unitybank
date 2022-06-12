@@ -1,0 +1,244 @@
+body {
+    margin: 0px;
+    font-size: 18px;
+} div.body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+} #logo {
+    width: 175px;
+    height: 75px;
+    margin: 10px;
+} .banner .logo {
+    margin: 0px;
+} .login {
+    background-color: #41C21A;/*#41C21A*/
+} input {
+    border-radius: 5px;
+    margin-top: 17px;
+    border: 0px;
+    background-color: #ffffff;
+    width: 80%;
+    height: 30px;
+} input[type="text"]::placeholder, input[type="password"]::placeholder {
+    font-size: 18px;
+    padding: 5px;
+    opacity: 0.8;
+} div.notRobot {
+    width: 50%;
+    padding: 20px 0px;
+    border-radius: 5px;
+    margin-top: 30px;
+    border: 1px grey solid;
+    background-color: #ccd2cb;
+    font-size: 20px;
+}  input#checkbox {
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+} input#login {
+    margin: 5%;
+    width: 40%;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #B0FF7A;
+    border: 2px black solid; 
+    font-weight: bold;
+} button#signup {
+    margin: 5%;
+    width: 40%;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px 0px;
+    background-color: #ccd2cb;
+    border: 1px grey solid; 
+    font-weight: bold;
+} a {
+    text-decoration: none;
+    color: black;
+} p.terms {
+    font-size: 14px;
+    opacity: 0.9;
+    padding: 15px;
+} /*div.logo, div.sections, div.menu {
+    margin: 0px;
+    position: sticky;
+    top: 0;
+}*/ div.header {
+    display: grid;
+    grid-template-columns: 13.25% auto;
+} div.sections {
+    background-color: white;
+    margin: 0px;
+} .sections button {
+    width: 180px;
+    padding: 40px 0px; 
+    margin: 0px;
+    font-size: 20px;
+    float: right;
+} .sections button{
+    background-color: transparent;
+    border: 0;
+    color: grey;
+} .sections button:hover {
+    background-color: #B0FF7A;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+} div.logo {
+    background-color: #B0FF7A;
+    margin: 0;
+} div.menu {
+    background-color: #2B2F33;
+    display: static;
+} .menu button {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    text-align: left;
+    float: right;
+    padding: 10px 10px;
+    border: 0px;
+    font-size: 16px;
+    font-weight: bold;
+} .menu button:hover {
+    background-color: #000;
+    font-weight: bold;
+    color: #B0FF7A;
+    cursor: pointer;
+} div.body {
+    background-color: lightgrey;
+} #dp {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 30%;
+} hr {
+    margin: 0px;
+    height: 1.5;
+}
+
+
+/*transfer funds css start*/
+
+.head-color{
+    background-color: darkgreen;
+    height: 30px;
+}
+
+.head-text{
+    padding: 5px 15px;
+    color: white;
+}
+
+.transfer-contain{
+    width: 1100px;
+    height: 650px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 20px;
+}
+.
+
+.tg{border-collapse:collapse;
+    border-spacing:0;
+}
+.tg td{
+    border-color:lightgrey;
+    border-style:solid;
+    border-width:2px;
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+    padding-bottom: ;
+    word-break:normal;
+}
+
+.tg p{
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+
+}
+
+.tg th{
+    border-color:lightgrey;
+    border-style:solid;
+    border-width:2px;
+    font-family:Arial, sans-serif;
+    font-weight:normal;
+    overflow:hidden;
+    word-break:normal;
+    background-color: limegreen;
+    color: black;
+}
+.tg .tg-errm{
+    font-size:22px;
+    text-align:left;
+    vertical-align:top
+}
+.tg .tg-style{
+    text-align:left;
+    vertical-align:top
+}
+
+.transfer-contain input.smoller{
+    transform: scale(.5);
+    margin-top: 1px;
+}
+
+.transfer-contain input.texto{
+    padding: 0;
+    margin-top: -10px;
+    transform: scale(1);
+    width: 50%;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid darkgreen;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+
+.button1:hover {
+  background-color: limegreen;
+  color: black;
+}
+
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid darkgreen;
+  border-radius: 20px;
+}
+
+.button2:hover {
+  background-color: limegreen;
+  color: black;
+}
+
+
+
+/*transfer funds css end*/
