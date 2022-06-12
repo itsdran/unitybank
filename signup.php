@@ -8,6 +8,7 @@
 </head>
 <body>
         <?php include("templates/php/logo.php");?>
+        <img src="https://media.discordapp.net/attachments/982592711322386462/984790045443637309/bg.png" style="float:right; width: 45%;">
         <div id="signup">
             <br><br><br>
             <form method="POST" action="#" class="signup">
@@ -27,6 +28,5 @@
                 </center>
             </form>
         </div>
-        <img src="https://media.discordapp.net/attachments/982592711322386462/984790045443637309/bg.png" style="float:right; width: 45%;">
 </body>
 </html>

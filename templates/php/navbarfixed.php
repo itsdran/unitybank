@@ -13,7 +13,7 @@
         <img src="https://www.alchinlong.com/wp-content/uploads/2015/09/sample-profile.png" id="dp">
         <br><br>
         </center>
-        <a href="#"><button class="menu-btn"><i class="fa fa-id-card"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</button></a><hr>
+        <a href="profile.php"><button class="menu-btn"><i class="fa fa-id-card"></i>&nbsp;&nbsp;&nbsp;&nbsp;Profile</button></a><hr>
         <a href="dashboard.php"><button class="menu-btn"><i class="fa fa-sticky-note"></i>&nbsp;&nbsp;&nbsp;&nbsp;Check Savings</button></a>
         <a href="#"><button class="menu-btn"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;&nbsp;&nbsp;Transfer Money</button></a>
         <a href="#"><button class="menu-btn"><i class="fa fa-money"></i>&nbsp;&nbsp;&nbsp;&nbsp;Deposit Money</button></a>

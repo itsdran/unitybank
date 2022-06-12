@@ -27,22 +27,7 @@ div#twoRows {
 } h1, h3 {
     color:#006400;
     text-align: center;
-} div#choices {
-    display: grid;
-    grid-template-columns: auto auto auto;
-} div#choices .column {
-    margin: 0;
-    padding: 0;
-} #choices .donate-once {
-    background-color: #41C21A;
-    width: 175px;
-    padding: 25px 0px;
-    margin-top: 20px;
-    border: 0;
-    border-radius: 15px;
-    color: #fff;
-    font-weight: bold;
-} input[type="email"] {
+} input[type="email"], input[type="number"]  {
     width: 90%;
 } .donate-btn {
     width: 90%;
@@ -53,8 +38,16 @@ div#twoRows {
     color: #fff;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
 } .total-donated {
     margin: 0;
     float: right;
     color: red;
+    margin-right: 10%;
+} .donate-btn:hover {
+    background-color: #41C21A;
+} label {
+    font-size: 24px;
+    font-weight: bold;
+    color: #41C21A;/*#006400*/
 }
