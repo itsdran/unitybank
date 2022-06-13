@@ -67,7 +67,7 @@
             <p>Donec in quam sed urna bibendum tincidunt quis mollis mauris.</p>
             <hr>
             <h2>Account</h2>
-            <strong>&nbsp;See Profile</strong><br>
+            <strong>&nbsp;<a href="profile.php">See Profile</a></strong><br>
             <p>Edit your profile, make changes to your information.</p>
             <hr>
             <strong>&nbsp;Delete Account</strong><br>

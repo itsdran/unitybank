@@ -40,7 +40,7 @@
                     ?>
                 </center>
             </div>
-            <div class=".setting-content">
+            <div>
                 <h2>Edit Account</h2>
                 <form method="POST">
                     <div class="label">First Name</div>

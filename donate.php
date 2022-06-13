@@ -20,7 +20,24 @@
     <title>Donate now!</title>
 </head>
 <body>
-    <?php include ("templates/php/navbarfixed.php");?>
+    <?php 
+        include ("templates/php/navbarfixed.php");
+        $query = mysqli_query($db, "SELECT SUM(amount) AS totalDonation FROM donations");
+        $row = mysqli_fetch_assoc($query);
+        $totalDonation = $row['totalDonation'];
+
+        if ($totalDonation < 1000000) {
+            // Anything less than a million
+            $format = number_format($totalDonation);
+        } else if ($totalDonation < 1000000000) {
+            // Anything less than a billion
+            $format = number_format($totalDonation / 1000000, 2) . 'M';
+        } else {
+            // At least a billion
+            $format = number_format($totalDonation / 1000000000, 0) . 'B';
+        }
+    ?>
+
     <div class="body">
         <!--Start here!-->
         <h1>EMPOWER LEADERS AND CHANGE MAKERS</h1>
@@ -36,7 +53,6 @@
                 <p> Become a monthly contributor and recieve a token at appreciation sent straight from our HQ! <br>
                 </p>
             </div>
-
             <div class="column">
                 <p class="header">MAKE A ONE-TIME GIFT</p>
                 <form method="POST"><br><br>
@@ -44,23 +60,7 @@
                     <input type="number" placeholder="Enter the amount you want to donate" required id="donateInput" name="amount"/><br><br>
                     <input type="date" id="today" name="transactionDate" hidden></input>
                     <input type="text" name="transactionType" value="Donation" hidden></input>
-                        <?php
-                            $query = mysqli_query($db, "SELECT SUM(amount) AS totalDonation FROM donations");
-                            $row = mysqli_fetch_assoc($query);
-                            $totalDonation = $row['totalDonation'];
-
-                            if ($totalDonation < 1000000) {
-                                // Anything less than a million
-                                $format = number_format($totalDonation);
-                            } else if ($totalDonation < 1000000000) {
-                                // Anything less than a billion
-                                $format = number_format($totalDonation / 1000000, 2) . 'M';
-                            } else {
-                                // At least a billion
-                                $format = number_format($totalDonation / 1000000000, 0) . 'B';
-                            }
-                        ?>
-                        <label for="donateInput">Email</label><br>
+                    <label for="donateInput">Email</label><br>
                     <input type="email" placeholder="Enter your email" name="email" required/><br><br>
                         <div class="total-donated">Total Donated: <?php echo $format;?></div><br><br>
                     <button type="submit" class="donate-btn" name="donate">Donate now!</button>
