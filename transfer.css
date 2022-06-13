@@ -1,0 +1,50 @@
+
+/*<--- transfer.php--->*/
+.transfer-money-body {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 50px;
+  gap: 40px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.where-transfer {
+  padding: 25px;
+  background-color: white;
+  box-shadow: 3px 3px 0 #999a9c, 
+  6px 6px 0 #5a5a5c;
+}
+
+.where-transfer h1 {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.where-transfer-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  row-gap: 25px;
+}
+
+.where-transfer-options a {
+  padding: 15px;
+  background-color: #b3da99;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 3px 3px 0 #529252;
+}
+
+.transfer-money-more-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  row-gap: 25px;
+}
+
+.transfer-money-more-options a {
+  padding: 15px;
+  background-color: white;
+  box-shadow: 3px 3px 0 #5a5a5c;
+}
