@@ -45,26 +45,24 @@
                     <input type="date" id="today" name="transactionDate" hidden></input>
                     <input type="text" name="transactionType" value="Donation" hidden></input>
                         <?php
-                            $query = "SELECT balance FROM users WHERE atmNumber = '$atmNumber'";
-                            $result = mysqli_query($db, $query);
-                            $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                            $query = mysqli_query($db, "SELECT SUM(amount) AS totalDonation FROM donations");
+                            $row = mysqli_fetch_assoc($query);
+                            $totalDonation = $row['totalDonation'];
 
-                            $number = $row['balance'];
-
-                            if ($number < 1000000) {
+                            if ($totalDonation < 1000000) {
                                 // Anything less than a million
-                                $format = number_format($number);
-                            } else if ($number < 1000000000) {
+                                $format = number_format($totalDonation);
+                            } else if ($totalDonation < 1000000000) {
                                 // Anything less than a billion
-                                $format = number_format($number / 1000000, 2) . 'M';
+                                $format = number_format($totalDonation / 1000000, 2) . 'M';
                             } else {
                                 // At least a billion
-                                $format = number_format($number / 1000000000, 0) . 'B';
+                                $format = number_format($totalDonation / 1000000000, 0) . 'B';
                             }
                         ?>
                         <label for="donateInput">Email</label><br>
-                    <input type="email" placeholder="Enter your email" required/><br><br>
-                        <div class="total-donated">Total Donated: -<?php echo $format;?></div><br><br>
+                    <input type="email" placeholder="Enter your email" name="email" required/><br><br>
+                        <div class="total-donated">Total Donated: <?php echo $format;?></div><br><br>
                     <button type="submit" class="donate-btn" name="donate">Donate now!</button>
                 </form>
             </div>

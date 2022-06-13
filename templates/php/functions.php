@@ -46,7 +46,6 @@
 
         if($count == 1){  
             $_SESSION ['atmNumber']     = $atm;
-            $id = $row['userID'];
             $_SESSION ['userID']         = $id;
             echo "<script>alert('You are successfully logged in!');</script>";
             echo "<script>location.href='../../dashboard.php';</script>";
@@ -61,49 +60,71 @@
     if (isset ($_POST["donate"])) {
 
         $userID             = $_SESSION ['userID'];
+        $email              = $_POST['email'];
         $transactionType    = $_POST['transactionType'];
-        $transactionDate    = GETDATE();
         $amount             = $_POST['amount'];
 
-        $query = "  INSERT INTO transactions    (userID, transactionDescription, transactionDate) 
-                    VALUES                      ((SELECT userID FROM users WHERE userID = '$userID')), '$transactionType', '$transactionDate')";
-        $result = mysqli_query ($db, $query);
+        $result = mysqli_query ($db, "SELECT * FROM users WHERE userID = '$id'");
+        $row = mysqli_fetch_assoc($result);
+        $balance = $row['balance'];
 
-        if ($result) {
-            $sql = "UPDATE users
-                    SET balance=balance-'$amount'";
-            mysqli_query ($db, $sql);
-            echo '<script>alert("Thanks for the donation!.")</script>'; 
-        }
+        if ($amount < $balance) {//Insufficient balance, failed transaction
+            echo '<script>alert("Transaction fail, insufficient funds.")</script>'; 
+            echo "<script>location.href='donate.php';</script>";
+        } else {
+            $query = "  INSERT INTO donations       (userID, email, time, amount) 
+                        VALUES                      ($userID, '$email', now(), '$amount');";
+            $result = mysqli_query ($db, $query);
+
+            if ($result) {
+                $sql = "UPDATE users
+                        SET balance=balance-'$amount'";
+                mysqli_query ($db, $sql);
+
+                $query = "  INSERT INTO transactions    (userID, transactionDescription, transactionDate) 
+                        VALUES                          ($userID, '$transactionType', now());";
+                $result = mysqli_query ($db, $query);
+                if ($result) {
+                    echo '<script>alert("Thanks for the donation!.")</script>'; 
+                    echo "<script>location.href='donate.php';</script>";
+                }
+            }
     }
 
     if (isset ($_POST['updateProfile'])) {
+        $userID             = $_SESSION ['userID'];
         $atmNumber         = $_POST ['atmNumber'];
         $confirmPassword   = $_POST ['confirmPassword'];
         $sql = "SELECT * FROM users WHERE atmNumber='$atmNumber'";
         $result = mysqli_query($db, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        
+
         if ($confirmPassword === $row['password']) {
             $fName             = $_POST ['fName'];
             $lName             = $_POST ['lName'];
             $address           = $_POST ['address'];
             $email             = $_POST ['email'];
             $atmNumber         = $_POST ['atmNumber'];
-            $confirmPassword          = $_POST ['confirmPassword'];
-            //$id = $_SESSION ['userID'];
+            $confirmPassword   = $_POST ['confirmPassword'];
+
+            $sql = "INSERT INTO transactions    (userID, transactionDescription, transactionDate)
+                    VALUES                      ($userID, '$transactionType', now());";
+            $output = mysqli_query ($db, $sql);
+
             $query ="   UPDATE users 
                         SET fName='$fName', lName='$lName', address='$address', email='$email', atmNumber='$atmNumber' 
                         WHERE atmNumber='$atmNumber';";
             $result = mysqli_query($db, $query);
-            if ($result) {
+
+            if ($result && $output) {
                 echo '<script>alert("Update Successful!.")</script>'; 
                 echo "<script>location.href='dashboard.php';</script>";
+            } else {
+                echo '<script>alert("Wrong password!.")</script>'; 
+                echo "<script>location.href='profile.php';</script>";
             }
-        } else {
-            echo '<script>alert("Wrong password!.")</script>'; 
-            echo "<script>location.href='profile.php';</script>";
         }
-        
+        }
+
     }
 ?>

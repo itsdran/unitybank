@@ -54,9 +54,11 @@
                     <div class="label">ATM Number</div>
                     <input type="text" name="atmNumber" value="<?php echo $row['atmNumber']?>"></input><br>
                     <div class="label">Confirm Password</div>
-                    <input type="password" name="confirmPassword" placeholder="Enter password to confirm"></input>
+                    <input type="password" name="confirmPassword" placeholder="Enter password to confirm" required></input>
+                    <input type="text" value="Update Profile" name="transactionType" hidden/><br><br>
                     <br><br>
-                    <input type="submit" name="updateProfile" class="update-btn" value="Update"></input>
+                    <button type="submit" name="updateProfile" class="update-btn">Update</button>
+                    <button type="reset" class="clear">Clear</button>
                 </form>
             </div>    
         </div>
