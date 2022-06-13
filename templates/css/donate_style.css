@@ -27,7 +27,7 @@ div#twoRows {
 } h1, h3 {
     color:#006400;
     text-align: center;
-} input[type="email"], input[type="number"]  {
+} input {
     width: 90%;
 } .donate-btn {
     width: 90%;

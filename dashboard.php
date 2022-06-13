@@ -23,31 +23,13 @@
 <body>
 <?php include ("templates/php/navbarfixed.php");?>
 
-  <?php
-    $query = "SELECT balance FROM users WHERE atmNumber = '$atmNumber'";
-    $result = mysqli_query($db, $query);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-    $number = $row['balance'];
-
-    if ($number < 1000000) {
-        // Anything less than a million
-        $format = number_format($number);
-    } else if ($number < 1000000000) {
-        // Anything less than a billion
-        $format = number_format($number / 1000000, 2) . 'M';
-    } else {
-        // At least a billion
-        $format = number_format($number / 1000000000, 0) . 'B';
-    }
-  ?>
-
   <div class="body">
     <h1>Dashboard</h1>
-    <h4>Accounts</h4><br>
+    <h4>Account</h4><br>
     <div class="section">
       <div class="info">
         <?php
+          include ("templates/php/showBalance.php");
           $query = "SELECT balance, fName, lName FROM users WHERE atmNumber = '$atmNumber'";
             $result = mysqli_query($db, $query);
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -58,7 +40,7 @@
 
           <div class="balance">
             <h5>Available Balance</h5>
-            <b>PHP <?php echo $format;?></b><br>
+            <b>PHP <?php echo $format?></b><br>
           </div>
       </div>
       <div class="column">
