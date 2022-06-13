@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  include ("templates/php/functions.php");
+
+  if (!isset ($_SESSION ['atmNumber'])) {
+    $_SESSION['atmNumber'] = $_POST['atmNumber'];
+    echo "<script>alert('You must log in first.');</script>";
+    //echo "<script>location.href='index.php';</script>";
+  } else {
+    $atmNumber = $_SESSION['atmNumber'];
+    //$id = $_SESSION ['userID'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,3 +37,4 @@
     </div>
 </body>
 </html>
+<?php }?>
