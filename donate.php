@@ -40,8 +40,7 @@
 
     <div class="body">
         <!--Start here!-->
-        <h1>EMPOWER LEADERS AND CHANGE MAKERS</h1>
-        <h3>"DONATE TO THE UNITY BANK'S CHARITY"</h3>
+
         <div id="twoRows">
             <div class="column">
                 <p class="header">JOIN US AS A MEMBER</p>

@@ -5,7 +5,8 @@
   if (!isset ($_SESSION ['atmNumber'])) {
     $_SESSION['atmNumber'] = $_POST['atmNumber'];
     echo "<script>alert('You must log in first.');</script>";
-    //echo "<script>location.href='index.php';</script>";
+    echo "<script>location.href='index.php';</script>";
+    exit();
   } else {
     $atmNumber = $_SESSION['atmNumber'];
     //$id = $_SESSION ['userID'];
