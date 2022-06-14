@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <meta http-equiv="refresh" content="">
-    <title>Settings</title>
+    <title>Profile</title>
 </head>
 <body>
     <?php include ("templates/php/navbarfixed.php");?>
@@ -57,7 +57,7 @@
                     <input type="password" name="confirmPassword" placeholder="Enter password to confirm" required></input>
                     <input type="text" value="Update Profile" name="transactionType" hidden/><br><br>
                     <br><br>
-                    <button type="submit" name="updateProfile" class="update-btn">Update</button>
+                    <input type="submit" name="updateProfile" class="update-btn" value="Update"></input>
                     <button type="reset" class="clear">Clear</button>
                 </form>
             </div>    

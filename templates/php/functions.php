@@ -84,8 +84,8 @@
                         SET balance=balance-'$amount' WHERE userID = '$userID'";
                 mysqli_query ($db, $sql);
 
-                $query = "  INSERT INTO transactions    (userID, transactionDescription, transactionDate) 
-                        VALUES                          ($userID, '$transactionType', now());";
+                $query = "  INSERT INTO transactions    (userID, transactionDescription, amount, transactionDate) 
+                            VALUES                      ($userID, '$transactionType', '$amount', now());";
                 $result = mysqli_query ($db, $query);
                 if ($result) {
                     echo '<script>alert("Thanks for the donation!.")</script>'; 
@@ -111,9 +111,9 @@
             $atmNumber         = $_POST ['atmNumber'];
             $confirmPassword   = $_POST ['confirmPassword'];
             $transactionType   = $_POST ['transactionType'];
-
+            $now               = date("Y-m-d H:i:s");
             $sql = "INSERT INTO transactions    (userID, transactionDescription, transactionDate)
-                    VALUES                      ($userID, '$transactionType', now());";
+                    VALUES                      ($userID, '$transactionType', '$now');";
             $output = mysqli_query ($db, $sql);
 
             $query ="   UPDATE users 
@@ -143,8 +143,8 @@
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
 
         if ($confirmPassword === $row['password']) {
-            $sql = "INSERT INTO transactions    (userID, transactionDescription, transactionDate)
-            VALUES                              ($userID, '$transactionType', now());";
+            $sql = "INSERT INTO transactions    (userID, transactionDescription, amount, transactionDate)
+            VALUES                              ($userID, '$transactionType', '$amount', now());";
             $output = mysqli_query ($db, $sql);
 
             $query ="   UPDATE users 
@@ -179,9 +179,11 @@
         $result = mysqli_query($db, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);
+
         //Check if account exists
         if($count == 1){
             //Account for transfer exists, fetch for the userID of the user
+            $userIDtransfered = $row['userID'];
             $sql = "SELECT * FROM users WHERE userID='$userID'";
             $result = mysqli_query($db, $sql);
             $row_result = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -191,12 +193,13 @@
                     echo '<script>alert("Transaction fail, insufficient funds.")</script>'; 
                     echo "<script>location.href='transfer-money.php';</script>";
                     exit();
-                } else {
-                    //Account exists, correct password, and sufficient balance
+                } else {//Account exists, correct password, and sufficient balance
                     //Add to the transaction
-                    $sql = "INSERT INTO transactions    (userID, transactionDescription, transactionDate)
-                            VALUES                      ($userID, CONCAT('$transactionType', ' to ', '$account'), now());";
+                    $now = date("Y-m-d H:i:s");
+                    $sql = "INSERT INTO transactions    (userID, transactionDescription, amount, transactionDate)
+                            VALUES                      ($userID, '$transactionType', '$amount', '$now');";
                     $output = mysqli_query ($db, $sql);
+
                     //Adds the transfer to the account
                     $query ="   UPDATE users 
                                 SET balance = balance + '$amount' 

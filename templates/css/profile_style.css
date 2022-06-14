@@ -21,7 +21,8 @@ div.grid {
     display: inline-block;
 } h2 {
     padding: 10px 30px;
-} button.update-btn, button.clear {
+} input.update-btn, .clear {
+    width: 15%;
     padding: 20px 40px;
     font-size: 18px;
     border-radius: 15px;
@@ -32,6 +33,6 @@ div.grid {
     font-size: 20px;
     cursor: pointer;
     margin: auto 2.5% auto auto;
-} button:hover {
+} button:hover, input.update-btn:hover {
     background-color: #41C21A;;
 }
