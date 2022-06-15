@@ -28,9 +28,9 @@ $db = mysqli_connect ("localhost", "root", "", "unitybank");
                 exit();
             }
         } else {
-                echo '<script>alert("Account does not exist!")</script>'; 
-                echo "<script>location.href='../../forgot-password.php#login';</script>";
-                exit();
+            echo '<script>alert("Account does not exist!")</script>'; 
+            echo "<script>location.href='../../forgot-password.php#login';</script>";
+            exit();
         }
     }
 

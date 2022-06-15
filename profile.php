@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="templates/css/navbarfixed_style.css">
     <link rel="stylesheet" href="templates/css/profile_style.css">
+    <link rel="stylesheet" href="templates/css/footer_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <meta http-equiv="refresh" content="">
@@ -40,6 +41,7 @@
                     ?>
                 </center>
             </div>
+            
             <div>
                 <h2>Edit Account</h2>
                 <form method="POST">
@@ -63,6 +65,8 @@
             </div>    
         </div>
     </div>
+    </div>
+    <?php include ('templates/php/footer.php');?>
 </body>
 </html>
 <?php } ?>

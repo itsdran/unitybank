@@ -1,0 +1,30 @@
+div.footer {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 1% 0px;
+    background-color: #B4D997;
+    border-top: 3px #e6e7e9 solid;
+    font-size: 16px;
+} div.cols {
+    column-gap: 5px;
+    row-gap: 5px;
+    margin: 5px;
+    text-align: center;
+    margin: auto auto;
+} .footerlink {
+    color: #0F241D;
+    font-weight: lighter;
+    letter-spacing: 1px;
+} .footerlink:hover, .fa-facebook:hover, .fa-instagram:hover, .fa-google:hover {
+    color:#27995C;
+    cursor: pointer;
+    font-size: 17px;
+} .fa-facebook, .fa-instagram, .fa-google{
+    padding: 10px;
+    color:#0F241D;
+    font-size: 65px;
+} a {
+    text-decoration: none;
+}

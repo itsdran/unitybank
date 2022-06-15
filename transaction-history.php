@@ -75,7 +75,7 @@
     </div>
     <h4 class="title">Transaction History</h4>
     <?php 
-      echo '<table id="transaction-history" class="table table-hover table-sm table-striped" width="85%">';
+      echo '<table id="transaction-history" class="table table-hover table-sm table-striped" width="90%">';
           echo "<thead>";
               echo "<tr>";
                   echo "<th>Transaction ID</th>";
@@ -89,16 +89,6 @@
           $userID = $_GET ['userID'];
           $sort = $_GET ['sort'];
           $sql  = "SELECT * FROM transactions WHERE userID = $userID";
-
-          if ($_GET['sort'] == 'transactionID') {
-              $sql .= " ORDER BY transactionID";
-          } elseif ($_GET['sort'] == 'transactionDescription') {
-              $sql .= " ORDER BY transactionDescription";
-          } elseif ($_GET['sort'] == 'amount') {
-              $sql .= " ORDER BY amount";
-          } elseif($_GET['sort'] == 'transactionDate') {
-              $sql .= " ORDER BY transactionDate";
-          }
 
           $result = mysqli_query ($db, $sql);
 
