@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("templates/php/functions.php");
+    include ("templates/php/donate.php");
 
     if (!isset ($_SESSION ['atmNumber'])) {
         $_SESSION['atmNumber'] = $_POST['atmNumber'];

@@ -1,4 +1,4 @@
-<?php include("templates/php/functions.php");?>
+<?php include("templates/php/signup.php");?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +8,6 @@
 </head>
 <body>
         <?php include("templates/php/logo.php");?>
-        <img src="https://media.discordapp.net/attachments/982592711322386462/984790045443637309/bg.png" style="float:right; width: 45%;">
         <div id="signup">
             <br><br><br>
             <form method="POST" action="#" class="signup">
@@ -18,6 +17,15 @@
                 <input type="text" name="address" placeholder="Address" required/>
                 <input type="text" name="email" placeholder="E-mail" required/>
                 <input type="password" name="password" placeholder="Password" required/>
+                <select name="recoveryQuestion">
+                    <option value="What is your platform?" selected>Recovery Question</option>
+                    <option value="What is your platform?">What is your platform?</option>
+                    <option value="If it's not him, who else? Diba?">If it's not him, who else? Diba?</option>
+                    <option value="Sino iboboto">Sino iboboto mo?</option>
+                    <option value="Pwede ba respect my onions?">Pwede ba respect my onions?</option>
+                    <option value="Maganda ang buhay namin dati ha?!">Maganda ang buhay namin dati ha?!</option>
+                </select>
+                <input type="text" name="recoveryAnswer" placeholder="Recovery Answer" required/>
                 <input type="text" name="atmNumber" placeholder="ATM Number" required/><br><br>
                 <center>
                     <input type="checkbox" name="notRobot" id="checkbox">&nbsp;I agree to the Terms of Agreement</input>
@@ -28,5 +36,6 @@
                 </center>
             </form>
         </div>
+        <img src="https://media.discordapp.net/attachments/982592711322386462/984790045443637309/bg.png" style="float:right; width: 45%;">
 </body>
 </html>

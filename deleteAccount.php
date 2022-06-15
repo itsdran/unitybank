@@ -6,8 +6,8 @@
         $_SESSION['atmNumber'] = $_POST['atmNumber'];
         echo "<script>alert('You must log in first.');</script>";
     } else {
-        $atmNumber = $_SESSION['atmNumber'];
-        $query = "DELETE FROM users WHERE atmNumber = '$atmNumber'";
+        //$atmNumber = $_SESSION['atmNumber'];
+        $query = "DELETE FROM users WHERE atmNumber = '$atm'";
         $result = mysqli_query($db, $query);
     }
     /*echo '<script type="text/javascript">';

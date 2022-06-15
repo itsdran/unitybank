@@ -1,11 +1,11 @@
 <?php
     session_start();
-    include ("templates/php/functions.php");
+    include ("templates/php/update-profile.php");
 
     if (!isset ($_SESSION ['atmNumber'])) {
     $_SESSION['atmNumber'] = $_POST['atmNumber'];
     echo "<script>alert('You must log in first.');</script>";
-    //echo "<script>location.href='index.php';</script>";
+    echo "<script>location.href='index.php';</script>";
     } else {
     $atmNumber = $_SESSION['atmNumber'];
     //$id = $_SESSION ['userID'];
@@ -57,7 +57,7 @@
                     <input type="password" name="confirmPassword" placeholder="Enter password to confirm" required></input>
                     <input type="text" value="Update Profile" name="transactionType" hidden/><br><br>
                     <br><br>
-                    <input type="submit" name="updateProfile" class="update-btn" value="Update"></input>
+                    <button type="submit" name="updateProfile" class="update-btn" value="Update">Update</button>
                     <button type="reset" class="clear">Clear</button>
                 </form>
             </div>    

@@ -1,0 +1,27 @@
+table {
+    width: 85%;
+    margin: 2.5% auto;
+<<<<<<< Updated upstream
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+} tr {
+    width: 85%;
+    background-color: #fff;
+    margin: 20px auto;
+
+} td, th { 
+    padding: 30px 50px;
+    margin: 0px auto;
+    border-bottom: 1px black solid;
+=======
+} tr {
+    width: 85%;
+    background-color: #fff;
+    margin: 5px auto;
+} td, th { 
+    padding: 10px 20px;
+    margin: 50px auto;
+    border-radius: 5px;
+>>>>>>> Stashed changes
+} 

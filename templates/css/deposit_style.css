@@ -41,10 +41,11 @@ div.content {
     padding: 30px 20px;
     border: 0;
     width: 50%;
-} input:focus {
+} select:focus, input:focus {
     outline: none;
 } button.deposit {
     padding: 20px 40px;
+    width: 25%;
     font-size: 18px;
     border-radius: 35px;
     border: 0;
@@ -54,4 +55,16 @@ div.content {
     font-size: 20px;
     cursor: pointer;
     margin: 2.5% 0;
+} button.deposit:hover {
+    background-color: #27995C;
+} select{
+    padding: 0px 15px;
+    opacity: 50%;
+    font-size: 22px;
+    width: 51.5%;
+    border: 1px white solid;
+    text-align: left;
+} option:hover, option:checked, option:active, option:focus {
+    background: linear-gradient(#ffffd4, #ffffd4);
+    position: relative;    
 }
