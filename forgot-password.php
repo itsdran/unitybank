@@ -1,4 +1,4 @@
-<?php include("templates/php/forgot-password.php");?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +8,7 @@
 </head>
 <body>
         <?php include("templates/php/logo.php");?>
+        <?php include("templates/php/forgotpassword.php");?>
         
         <div id="login">
             <br><br><br>

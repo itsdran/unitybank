@@ -15,9 +15,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="templates/css/navbarfixed_style.css">
     <link rel="stylesheet" href="templates/css/dashboard_style.css">
+    <link rel="stylesheet" href="templates/css/footer_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dashboard</title>
 </head>
@@ -55,8 +56,10 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           <br><br><a href="#">LEARN MORE</a>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
+    <?php include ('templates/php/footer.php');?>
 </body>
 </html>
 

@@ -32,9 +32,12 @@
                 echo '<script>alert("Update Successful!.")</script>'; 
                 echo "<script>location.href='dashboard.php';</script>";
             } else {
-                echo '<script>alert("Wrong password!.")</script>'; 
+                echo '<script>alert("Error!.")</script>'; 
                 echo "<script>location.href='profile.php';</script>";
             }
+        } else {
+            echo '<script>alert("Wrong password!.")</script>'; 
+            echo "<script>location.href='profile.php';</script>";
         }
     }   
 

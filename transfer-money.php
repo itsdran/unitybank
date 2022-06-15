@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="templates/css/navbarfixed_style.css">
     <link rel="stylesheet" href="templates/css/dashboard_style.css">
     <link rel="stylesheet" href="templates/css/deposit_style.css">
+    <link rel="stylesheet" href="templates/css/footer_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Transfer Money</title>
 </head>
@@ -43,26 +44,33 @@
                 <b>PHP <?php echo $format?></b><br>
             </div>
         </div>
+
         <h4>Transfer Money</h4>
+        
         <div>
             <form method="POST">
                 <div class="input">
                     <label for="amount">Account to Transfer</label>
                     <input type="number" name="account" placeholder="Account"></input>
                 </div>
+
                 <div class="input">
                     <label for="amount">Transfer Amount</label>
                     <input type="number" name="amount" placeholder="PHP 00.00"></input>
                 </div>
+
                 <div class="input">
                     <label for="amount">Password</label>
                     <input type="password" name="confirmPassword" placeholder="Password"></input>
                 </div>
+
                 <input type="text" name="transactionType" value="Transfer Money" hidden></input>
                 <center><button type="submit" name="transfer-money" class="deposit">TRANSFER MONEY</deposit></center>
             </form>
+            </div>
         </div>
     </div>
+    <?php include ('templates/php/footer.php');?>
 </body>
 </html>
 <?php
