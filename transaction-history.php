@@ -45,6 +45,7 @@
     </div>
     <h4>Transaction History</h4>
     <?php 
+<<<<<<< Updated upstream
       echo '<table id="dtDynamicVerticalScrollExample" class="table table-hover table-sm table-striped">';
           echo "<thead>";
               echo "<tr>";
@@ -86,6 +87,29 @@
       // Free result set
       mysqli_free_result($result);
     ?>
+=======
+      $userID = $_GET ['userID'];
+      $query  = "SELECT * FROM transactions WHERE userID = $userID";
+      $result = mysqli_query ($db, $query);    ?>
+      <table>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Transaction Description</th>
+          <th>Amount</th>
+          <th>Transaction Date</th>
+        </tr>
+          <?php 
+            while ($row=mysqli_fetch_assoc($result)){
+            ?>
+            <tr>
+                <td><?php echo $row["transactionID"];?></td>
+                <td><?php echo $row["transactionDescription"];?></td>
+                <td><?php echo $row["amount"];?></td>
+                <td><?php echo $row["transactionDate"];?></td>
+            </tr>
+          <?php } ?>
+      </table>
+>>>>>>> Stashed changes
   </div>
 </body>
 </html>

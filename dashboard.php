@@ -48,8 +48,13 @@
         <h4 class="title">Transaction History</h4>
         <h4 class="title">Insurance Marketplace</h4>
         <div class="one">
+<<<<<<< Updated upstream
           See all the transactions you've made throughout the whole creation of account.<br>
           <br><br><a href="transaction-history.php?userID=<?php echo $_SESSION['userID']?>&sort=transactionID">LEARN MORE</a>
+=======
+          See all the transactions you've made throughout the whole creation of account.
+          <br><br><br><a href="transaction-history.php?userID=<?php echo $_SESSION ['userID'];?>">LEARN MORE</a>
+>>>>>>> Stashed changes
         </div>
         <div class="two">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

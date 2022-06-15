@@ -21,9 +21,15 @@ div.grid {
     display: inline-block;
 } h2 {
     padding: 10px 30px;
+<<<<<<< Updated upstream
 } input.update-btn, .clear {
     width: 15%;
     padding: 20px 0px;
+=======
+} .update-btn, .clear {
+    width: 25%;
+    padding: 20px 40px;
+>>>>>>> Stashed changes
     font-size: 18px;
     border-radius: 35px;
     border: 0;

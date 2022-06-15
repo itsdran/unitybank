@@ -17,7 +17,11 @@
                 <input type="text" name="atmNumber" id="atmNumber" required/><br/><br/><br/><br/>
                 <label for="atmNumber">Password</label><br/>
                 <input type="password" name="password" required/>
+<<<<<<< Updated upstream
                 <a href="forgot-password.php#login" id="forgot">Forgot Password?</a><br/><br/><br/>
+=======
+                <a href="forgot-password.php#login" name="forgot-password" id="forgot">Forgot Password?</a><br/><br/><br/>
+>>>>>>> Stashed changes
                 <center>
                     <button type="submit" name="login" id="login">LOG IN</button><br/><br/><br/>
                     <div id="signup">Don't have an account? <a href="signup.php#signup">Sign Up!</a></div>
