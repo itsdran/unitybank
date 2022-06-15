@@ -1,19 +1,11 @@
 <?php
     session_start();
-<<<<<<< Updated upstream
     include ("templates/php/pay-bills.php");
-=======
-    include ("templates/php/functions.php");
->>>>>>> Stashed changes
 
     if (!isset ($_SESSION ['atmNumber'])) {
         $_SESSION['atmNumber'] = $_POST['atmNumber'];
         echo "<script>alert('You must log in first.');</script>";
-<<<<<<< Updated upstream
         echo "<script>location.href='index.php';</script>";
-=======
-        //echo "<script>location.href='index.php';</script>";
->>>>>>> Stashed changes
     } else {
         $atmNumber = $_SESSION['atmNumber'];
         //$id = $_SESSION ['userID'];
