@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 <?php include("templates/php/forgot-password.php");?>
-=======
-<?php include("templates/php/functions.php");?>
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html>
 <head>

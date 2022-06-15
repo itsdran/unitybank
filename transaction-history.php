@@ -20,13 +20,43 @@
     <link rel="stylesheet" href="templates/css/dashboard_style.css">
     <link rel="stylesheet" href="templates/css/transaction-history_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css"> 
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, Verdana;
+        padding-top: 0px;
+      } h4, h5, h6, th {
+        font-family: Times New Roman, Arial, Verdana;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        margin-bottom: 0px;
+      } h4.title {
+        margin: 30px 0px;
+        margin-left: 110px;
+      } div.dataTables_wrapper {
+        width: 85%;
+        margin: 0 auto;
+      }
+    </style>
+    <script>
+      $(document).ready(function () {
+          $('#transaction-history').DataTable();
+      });
+    </script>
     <title>Dashboard</title>
 </head>
 <body>
 <?php include ("templates/php/navbarfixed.php");?>
 
   <div class="body">
-    <h4>Account</h4><br>
+    <h4 class="title">Account</h4>
     <div class="section">
       <div class="info">
         <?php
@@ -35,24 +65,23 @@
           $result = mysqli_query($db, $query);
           $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         ?>
-        <b><?php echo $row['fName'] . ' ' . $row['lName'];?></b><br>
-        Check Savings ePayment<br>
+        <h6><?php echo $row['fName'] . ' ' . $row['lName'];?></h6>
+        <h6>Check Savings ePayment</h6>
       </div>
       <div class="balance">
-        <h5>Available Balance</h5>
-          <b>PHP <?php echo $format?></b><br>
+        <h6>Available Balance</h6>
+        <h6>PHP <?php echo $format?></h6>
         </div>
     </div>
-    <h4>Transaction History</h4>
+    <h4 class="title">Transaction History</h4>
     <?php 
-<<<<<<< Updated upstream
-      echo '<table id="dtDynamicVerticalScrollExample" class="table table-hover table-sm table-striped">';
+      echo '<table id="transaction-history" class="table table-hover table-sm table-striped" width="85%">';
           echo "<thead>";
               echo "<tr>";
-                  echo "<th><a href='transaction-history.php?sort=transactionID'>Transaction ID</a></th>";
-                  echo "<th><a href='transaction-history.php?sort=transactionDescription'>Transaction Description</a></th>";
-                  echo "<th><a href='transaction-history.php?sort=amount'>Amount</a></th>";
-                  echo "<th><a href='transaction-history.php?sort=transactionDate'>Transaction Date</a></th>";
+                  echo "<th>Transaction ID</th>";
+                  echo "<th>Transaction Description</th>";
+                  echo "<th>Amount</th>";
+                  echo "<th>Transaction Date</th>";
               echo "</tr>";
           echo "</thead>";
           echo "<tbody>";
@@ -87,29 +116,6 @@
       // Free result set
       mysqli_free_result($result);
     ?>
-=======
-      $userID = $_GET ['userID'];
-      $query  = "SELECT * FROM transactions WHERE userID = $userID";
-      $result = mysqli_query ($db, $query);    ?>
-      <table>
-        <tr>
-          <th>Transaction ID</th>
-          <th>Transaction Description</th>
-          <th>Amount</th>
-          <th>Transaction Date</th>
-        </tr>
-          <?php 
-            while ($row=mysqli_fetch_assoc($result)){
-            ?>
-            <tr>
-                <td><?php echo $row["transactionID"];?></td>
-                <td><?php echo $row["transactionDescription"];?></td>
-                <td><?php echo $row["amount"];?></td>
-                <td><?php echo $row["transactionDate"];?></td>
-            </tr>
-          <?php } ?>
-      </table>
->>>>>>> Stashed changes
   </div>
 </body>
 </html>
