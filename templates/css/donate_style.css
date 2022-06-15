@@ -6,8 +6,6 @@ div#twoRows {
     margin: 35px 50px;
     box-shadow: 5px 10px #888888;
     column-gap: 0px;
-} #twoRows .column {
-    /*padding-bottom: 50px;*/
 } #twoRows .header {
     font-weight: bold;
     text-align: center;
@@ -32,7 +30,7 @@ div#twoRows {
 } .donate-btn {
     width: 90%;
     padding: 8px 0px;
-    border-radius: 10px;
+    border-radius: 35px;
     border: 0;
     background-color: #2b4f3f;
     color: #fff;
@@ -45,7 +43,7 @@ div#twoRows {
     color: red;
     margin-right: 10%;
 } .donate-btn:hover {
-    background-color: #41C21A;
+    background-color: #27995C;
 } label {
     font-size: 24px;
     font-weight: bold;

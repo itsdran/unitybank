@@ -17,10 +17,10 @@
                 <input type="text" name="atmNumber" id="atmNumber" required/><br/><br/><br/><br/>
                 <label for="atmNumber">Password</label><br/>
                 <input type="password" name="password" required/>
-                <a href="forgotPassword.php" id="forgot">Forgot Password?</a><br/><br/><br/>
+                <a href="forgot-password.php#login" id="forgot">Forgot Password?</a><br/><br/><br/>
                 <center>
                     <button type="submit" name="login" id="login">LOG IN</button><br/><br/><br/>
-                    <div id="signup">Don't have an account? <a href="signup.php">Sign Up!</a></div>
+                    <div id="signup">Don't have an account? <a href="signup.php#signup">Sign Up!</a></div>
                     <br><br><br>
                 </center>
             </form>

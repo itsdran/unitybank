@@ -23,9 +23,9 @@ div.grid {
     padding: 10px 30px;
 } input.update-btn, .clear {
     width: 15%;
-    padding: 20px 40px;
+    padding: 20px 0px;
     font-size: 18px;
-    border-radius: 15px;
+    border-radius: 35px;
     border: 0;
     background-color: #2b4f3f;
     color: #fff;
@@ -34,5 +34,5 @@ div.grid {
     cursor: pointer;
     margin: auto 2.5% auto auto;
 } button:hover, input.update-btn:hover {
-    background-color: #41C21A;;
+    background-color: #27995C;
 }

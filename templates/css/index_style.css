@@ -44,18 +44,34 @@ body {
 } button#login, button#signup {
     padding: 5% 15%;
     font-size: 18px;
-    border-radius: 25px;
+    border-radius: 35px;
     border: 0;
     background-color: #2b4f3f;
     color: #fff;
     font-weight: bold;
     font-size: 20px;
+} button#login:hover, button#signup:hover {
+    background-color: #27995C;
+    cursor: pointer;
 } div#signup {
     font-size: 18px;
     color: #006400;
     text-decoration: none;
-} #signup a {color: #006400;} #signup a:hover {color: #41C21A;}
+} #signup a {color: #006400;} #signup a:hover, #forgot:hover {color: #41C21A;}
 a {
     text-decoration: none;
     color: #41C21A;
-}
+} select{
+    padding: 0px 0px;
+    margin-top: 10px;
+    font-size: 22px;
+    width: 101%;
+    border: 1px #C7FFB0 solid;
+    text-align: left;
+    background-color: #C7FFB0;
+    font-size: 18px;
+    color: grey;
+    border-bottom: 2px solid #006400;
+} select:focus {
+    outline: 0;
+} 
