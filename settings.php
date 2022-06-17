@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("templates/php/functions.php");
+    include ("templates/php/deleteAccount.php");
 
     if (!isset ($_SESSION ['atmNumber'])) {
     $_SESSION['atmNumber'] = $_POST['atmNumber'];
@@ -73,7 +73,11 @@
             <hr>
             <strong>&nbsp;Delete Account</strong><br>
             <p>Once deleted, you will never be able to recover your account.</p><br>
-            <a href="deleteAccount.php" class="deleteAccount" onclick="return confirm('Are you sure you want to delete this account?');">Delete Account</a>
+            <form method="POST">
+                <input type="text" name="atmNumber" value="<?php echo $_SESSION['atmNumber'];?>" hidden/>
+                <button type="submit" name="deleteAccount" class="deleteAccount" onclick="return confirm('Are you sure you want to delete this account? ');">Delete Account</button>
+            </form>
+            
         </div>           
         <br>   <br>   
     </div>

@@ -8,6 +8,8 @@
         $add                = $_POST ['address'];
         $mail               = $_POST ['email'];
         $pass               = $_POST ['password'];
+        $recoQues           = $_POST ['recoveryQuestion'];
+        $recoAns            = $_POST ['recoveryAnswer'];
         $atm                = $_POST ['atmNumber'];
 
         $sql = "SELECT * FROM users WHERE atmNumber='$atm'";
@@ -18,13 +20,13 @@
             echo "<script>location.href='index.php';</script>";
             exit ();
         } else {
-            $query = "INSERT INTO users     (fName, lName, address, email, password, atmNumber) VALUES 
-                                            ('$f_name', '$l_name', '$add', '$mail', '$pass', '$atm');";
+            $query = "INSERT INTO users     (fName, lName, address, email, password, recoveryQuestion, recoveryAnswer, atmNumber) VALUES 
+                                            ('$f_name', '$l_name', '$add', '$mail', '$pass', '$recoQues', '$recoAns', '$atm');";
             mysqli_query($db, $query);
 
             echo "<script>alert('You now have an Unitybank ATM account');</script>";
-            echo "<script>location.href='index.php';</script>";
-            exit();
+            //echo "<script>location.href='index.php';</script>";
+            //exit();
         }     
     }
     
