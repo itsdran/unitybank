@@ -3,7 +3,7 @@
     $db = mysqli_connect ("localhost", "root", "", "unitybank");
 
     if(isset($_POST['login'])){
-
+        
         $atm    = $_POST['atmNumber'];  
         $pass   = $_POST['password'];  
 

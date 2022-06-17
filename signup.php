@@ -28,7 +28,7 @@
                 <input type="text" name="recoveryAnswer" placeholder="Recovery Answer" required/>
                 <input type="text" name="atmNumber" placeholder="ATM Number" required/><br><br>
                 <center>
-                    <input type="checkbox" name="notRobot" id="checkbox">&nbsp;I agree to the Terms of Agreement</input>
+                    <input type="checkbox" name="notRobot" id="checkbox" required>&nbsp;I agree to the Terms of Agreement</input>
                     <br/><br/><br/>
                     <button type="submit" name="signup" id="signup">SIGN UP</button><br/><br/><br/>
                     <div id="signup">Already have an account? <a href="index.php">Log In!</a></div>
