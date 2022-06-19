@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="templates/css/deposit_style.css">
     <link rel="stylesheet" href="templates/css/footer_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Deposit Money</title>
+    <title>Cash In Money</title>
 </head>
 <body>
 <?php include ("templates/php/navbarfixed.php");?>
@@ -44,11 +44,11 @@
                 <b>PHP <?php echo $format?></b><br>
             </div>
         </div>
-        <h4>Deposit Money</h4>
+        <h4>Cash In</h4>
         <div>
             <form method="POST">
                 <div class="input">
-                    <label for="amount">Deposit Amount</label>
+                    <label for="amount">Cash In Amount</label>
                     <input type="number" name="amount" placeholder="PHP 00.00"></input>
                 </div>
                 <div class="input">
@@ -56,7 +56,7 @@
                     <input type="password" name="confirmPassword" placeholder="Password"></input>
                 </div>
                 <input type="text" name="transactionType" value="Deposit Money" hidden></input>
-                <center><button type="submit" name="deposit" class="deposit">DEPOSIT MONEY</deposit></center>
+                <center><button type="submit" name="deposit" class="deposit">CASH IN</deposit></center>
             </form>
         </div>
     </div>

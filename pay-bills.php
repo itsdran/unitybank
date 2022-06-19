@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="templates/css/deposit_style.css">
     <link rel="stylesheet" href="templates/css/footer_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Deposit Money</title>
+    <title>Pay Bills</title>
 </head>
 <body>
 <?php include ("templates/php/navbarfixed.php");?>

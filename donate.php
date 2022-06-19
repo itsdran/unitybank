@@ -51,6 +51,17 @@
                     style="width:85%; height:70%;">
                 </center>
                 <p> Become a monthly contributor and recieve a token at appreciation sent straight from our HQ! <br>
+                START YOUR OWN HELPING STORY WITH UNICEF.<br>
+
+                Millions of youngsters face adversity on a daily basis.<br>
+
+                With limited access to education, health and nutrition, adequate shelter, safety from oppressors, and other essential rights, the most vulnerable children require our assistance now.<br>
+
+                We go to great lengths to reach the most vulnerable children, wherever they are, with life-saving goods, services, and help. But we can't do it on our own. So come with us! 
+                Today, become a #UNITHIEFChampion and begin your own story of helping children.<br>
+
+                Our presence in over 190 countries and territories enables us to save more children's lives, protect their rights, and assist them in reaching their full potential, from infancy through adolescence. 
+                And we never, ever give up.
                 </p>
             </div>
             <div class="column">

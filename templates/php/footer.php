@@ -17,13 +17,12 @@
             <b>© <?php echo date('Y');?> Unitybank of the Philippines</b>
         </div>
         <div class="cols">
-            <a href="dashboard.php" class="footerlink">Home</a><br>
+        <a href="dashboard.php" class="footerlink">Dashboard</a><br>
             <a href="about.php" class="footerlink">About</a><br>
             <a href="features.php" class="footerlink">Features</a><br>
             <a href="profile.php" class="footerlink">Profile</a><br>
         </div>
         <div class="cols">
-            <a href="dashboard.php" class="footerlink">Dashboard</a><br>
             <a href="transfer-money.php" class="footerlink">Transfer Money</a><br>
             <a href="deposit.php" class="footerlink">Deposit Money</a><br>
             <a href="pay-bills.php" class="footerlink">Pay Bills</a><br>

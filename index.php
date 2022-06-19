@@ -8,7 +8,7 @@
 </head>
 <body>
         <?php include("templates/php/logo.php");?>
-        <img src="https://media.discordapp.net/attachments/982592711322386462/984790045443637309/bg.png" style="float:right; width: 45%;">
+        
         <div id="login">
             <br><br><br>
             <form method="POST" action="templates/php/functions.php" class="login">
@@ -25,5 +25,6 @@
                 </center>
             </form>
         </div>
+        <img src="https://media.discordapp.net/attachments/986686544775614474/986690224094609588/PESOnline_logo_with_name.png?width=589&height=498" style="float:right; width: 45%;">
 </body>
 </html>
